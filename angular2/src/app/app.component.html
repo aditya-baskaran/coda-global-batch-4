@@ -1,0 +1,9 @@
+
+<div id="container">
+  <input type= "text" [(ngModel)]="itemName"> <button (click)="PutBucket()">Click Here to Extend!</button>
+ <!--  <p>{{itemName}}</p> -->
+
+  <ul>
+    <li *ngFor="let item of items; let ind = index;" [ngClass]="item[1] == 'Vegetable' ? 'veg-class' : 'fru-class'">{{item[0]}} <button (click)="KillBucket(ind)">Kill Switch!</button></li>
+  </ul>
+</div>
