@@ -25,13 +25,16 @@ export class AppComponent {
   }
 
   save(){
-    console.log(this.contactBookForm.value);
+    console.log(this.contactBookForm.valid);
+    if(this.contactBookForm.valid)
+    {
     this.contactBook=[...this.contactBook,...this.contactBookForm.value];
     this.contactBookForm=this.fb.array([this.fb.group({
       name:new FormControl("",Validators.required),
       number:new FormControl("",Validators.required)
-    })])
-  }
+    })])  
+}
+}
 
   remove(contact:any){
     this.contactBook.splice(this.contactBook.indexOf(contact),1)

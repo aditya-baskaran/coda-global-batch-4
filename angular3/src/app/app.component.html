@@ -1,20 +1,20 @@
 <div *ngFor="let group of contactBookForm.controls;">
   <form [formGroup]="group">
-    <input type="text" formControlName="name" placeholder="Contact name"/>
-    <input type="text" formControlName="number" placeholder="Enter number"/>
+    <input type="text" formControlName="name" placeholder="Contact name"/><span *ngIf="!group.controls.name.valid && group.controls.name.touched">Invalid Entry!</span>
+    <input type="text" formControlName="number" placeholder="Enter number"/><span *ngIf="!group.controls.number.valid && group.controls.number.touched">Invalid Entry!</span>
   </form>
 </div>
 <button (click)="addMore()">Next Contact?</button>
 <button (click)="save()">Save!</button>
 <table>
-  <tr>
+  <tr class="Header">
     <th>Name</th>
     <th>Number</th>
     <th>Action</th>
   </tr>
 <tr *ngFor="let contact of contactBook;" class="contact">
-  <td>{{contact.name}}</td>
-  <td>{{contact.number}}<td>
+  <td class = "box">{{contact.name}}</td>
+  <td class = "box">{{contact.number}}<td>
   <td><button (click)="remove(contact)">Kill!</button></td>
   </tr>
 </table>

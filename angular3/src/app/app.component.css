@@ -1,0 +1,29 @@
+form{
+    font-family: sans-serif;
+    
+}
+
+button{
+    font-family: cursive;
+    color: blueviolet;
+}
+
+.Header{
+    text-align: center;
+    font-family: Impact;
+    color: blue;
+    font-size: medium;
+}
+
+.contact{
+    text-align: center;
+    font-family: monospace;
+    color: crimson;
+    font-size: small;
+}
+
+.box{
+    border: black;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
